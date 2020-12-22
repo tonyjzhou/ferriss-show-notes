@@ -5,8 +5,8 @@ import webbrowser
 
 def main():
     if len(sys.argv) > 0:
-        total_seconds = convert_time_to_seconds(sys.argv[1])
-        base_url = sys.argv[2]
+        base_url = sys.argv[1]
+        total_seconds = convert_time_to_seconds(sys.argv[2])
         full_url = f"{base_url}&t={total_seconds}s"
 
         print(full_url)
