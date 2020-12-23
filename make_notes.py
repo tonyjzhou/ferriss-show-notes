@@ -14,7 +14,7 @@ def _extract_title(soup):
     return title_tag.text
 
 
-def _make_notes(blog_url: str, youtube_url: str):
+def _make_notes(blog_url: str, youtube_url: str) -> list:
     resp = requests.get(blog_url)
 
     if resp.status_code == 200:
@@ -23,7 +23,7 @@ def _make_notes(blog_url: str, youtube_url: str):
         content = _make_content(soup, youtube_url)
         title = _extract_title(soup)
 
-        return Notes(title=title, content=content)
+        return [Notes(title=title, content=content)]
     else:
         return None
 
@@ -44,24 +44,43 @@ def _make_content(soup, youtube_url):
 
 
 def main():
-    notes = _make_notes(blog_url='https://tim.blog/2020/12/09/harley-finkelstein/',
-                        youtube_url='https://www.youtube.com/watch?v=tcvzxXhSQ8o')
-    _save_notes(notes)
+    all_notes = _make_notes(blog_url='https://tim.blog/2020/12/09/harley-finkelstein/',
+                            youtube_url='https://www.youtube.com/watch?v=tcvzxXhSQ8o')
+    _save_all_notes(all_notes)
 
 
-def _save_notes(notes: list):
+def _save_all_notes(all_notes: list):
+    for notes in all_notes:
+        _save_notes(notes)
+
+    html = _render_all_notes(all_notes)
+    with open(f"public/index.html", "w") as writer:
+        writer.writelines(html)
+
+
+def _save_notes(notes: Notes):
     html = _render_notes(notes)
     with open(f"public/{notes.title}.html", "w") as writer:
         writer.writelines(html)
 
 
-def _render_notes(notes: list) -> str:
+def _render_all_notes(all_notes: list) -> str:
     env = Environment(
         loader=PackageLoader(package_name="jinja"),
         autoescape=select_autoescape(["html", "xml"]),
     )
 
-    template = env.get_template("note.html")
+    template = env.get_template("all_notes.html")
+    return template.render(all_notes=all_notes)
+
+
+def _render_notes(notes: Notes) -> str:
+    env = Environment(
+        loader=PackageLoader(package_name="jinja"),
+        autoescape=select_autoescape(["html", "xml"]),
+    )
+
+    template = env.get_template("notes.html")
     return template.render(notes=notes)
 
 
