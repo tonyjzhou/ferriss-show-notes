@@ -60,7 +60,7 @@ def _save_all_notes(all_notes: list):
 
 def _save_notes(notes: Notes):
     html = _render_notes(notes)
-    with open(f"public/{notes.title}.html", "w") as writer:
+    with open(f"public/{notes.filename()}", "w") as writer:
         writer.writelines(html)
 
 

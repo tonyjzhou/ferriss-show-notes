@@ -19,7 +19,7 @@
 
     {% for notes in all_notes %}
     <p>
-        <a href="{{notes.title}}.html">{{notes.title}}</a>
+        <a href="{{notes.filename()}}">{{notes.title}}</a>
     </p>
     {% endfor %}
 
