@@ -3,21 +3,21 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Show notes: {description}</title>
-    <meta name="description" content="{description}">
+    <title>Show notes: {{notes.title}}</title>
+    <meta name="description" content="{{notes.title}}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/style.css">
 </head>
 
 <body id="onebook">
 <section id="masthead">
-    <h1><a href="/" title="Show notes">{description}</a></h1>
+    <h1><a href="/" title="Show notes">{{notes.title}}</a></h1>
 </section>
 
 <div id="content">
     {% for note in notes.content %}
     <p>
-        <a href="/{{note.url}}">{{note.description}} [{{note.time}}]</a>
+        <a href="{{note.url}}">[{{note.time}}] {{note.description}}</a>
     </p>
     {% endfor %}
 </div>
