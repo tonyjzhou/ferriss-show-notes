@@ -58,7 +58,14 @@ def main():
                  youtube='https://www.youtube.com/watch?v=tcvzxXhSQ8o'),
 
         InputUrl(blog='https://tim.blog/2019/02/07/tobi-lutke-shopify/',
-                 youtube='https://www.youtube.com/watch?v=PQRXssjlk9U')
+                 youtube='https://www.youtube.com/watch?v=PQRXssjlk9U'),
+
+        InputUrl(blog='https://tim.blog/2018/06/07/one-person-businesses-that-make-1m-per-year/',
+                 youtube='https://www.youtube.com/watch?v=AhVEGIVAGco'),
+
+        InputUrl(blog='https://tim.blog/2020/12/08/jerry-seinfeld/',
+                 youtube='https://www.youtube.com/watch?v=yNTmFORn3xQ'),
+
     ])
     _save_all_notes(all_notes)
 
