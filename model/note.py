@@ -10,9 +10,18 @@ class Notes:
     def filename(self) -> str:
         title_regexp = re.compile(r'(.+) — .+\(#(.+)\)')
         title_match = title_regexp.match(self.title)
-        interviewee, number = title_match.group(1), title_match.group(2)
+        if title_match:
+            simplified, number = title_match.group(1), title_match.group(2)
+            return f"{simplified.replace(' ', '_')}_{number}.html"
 
-        return f"{interviewee.replace(' ', '_')}_{number}.html"
+        title_regexp = re.compile(r'(.+) \(#(.+)\)')
+        title_match = title_regexp.match(self.title)
+        if title_match:
+            simplified, number = title_match.group(1), title_match.group(2)
+            simplified = re.sub(r'\W+', ' ', simplified)
+            return f"{simplified.replace(' ', '_')}_{number}.html"
+
+        return f"{self.title}.html"
 
 
 @dataclass
