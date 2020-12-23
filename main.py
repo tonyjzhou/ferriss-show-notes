@@ -6,12 +6,21 @@ from bs4 import BeautifulSoup
 from jinja2 import Environment, PackageLoader, select_autoescape
 
 from converter import convert_to_full_url
-from model.note import Note, Notes
+from model.note import Note, Notes, InputUrl
 
 
 def _extract_title(soup):
     title_tag = soup.find('h1', {"class": "entry-title"})
     return title_tag.text
+
+
+def _make_all_notes(urls: list) -> list:
+    all_notes = []
+
+    for u in urls:
+        all_notes.extend(_make_notes(blog_url=u.blog, youtube_url=u.youtube))
+
+    return all_notes
 
 
 def _make_notes(blog_url: str, youtube_url: str) -> list:
@@ -44,8 +53,13 @@ def _make_content(soup, youtube_url):
 
 
 def main():
-    all_notes = _make_notes(blog_url='https://tim.blog/2020/12/09/harley-finkelstein/',
-                            youtube_url='https://www.youtube.com/watch?v=tcvzxXhSQ8o')
+    all_notes = _make_all_notes([
+        InputUrl(blog='https://tim.blog/2020/12/09/harley-finkelstein/',
+                 youtube='https://www.youtube.com/watch?v=tcvzxXhSQ8o'),
+
+        InputUrl(blog='https://tim.blog/2019/02/07/tobi-lutke-shopify/',
+                 youtube='https://www.youtube.com/watch?v=PQRXssjlk9U')
+    ])
     _save_all_notes(all_notes)
 
 

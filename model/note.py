@@ -20,3 +20,9 @@ class Note:
     description: str
     time: str
     url: str
+
+
+@dataclass
+class InputUrl:
+    blog: str
+    youtube: str
