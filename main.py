@@ -72,6 +72,9 @@ def main():
         InputUrl(blog='https://tim.blog/2020/06/26/hugh-jackman/',
                  youtube='https://www.youtube.com/watch?v=kzF8StNS_aw'),
 
+        InputUrl(blog='https://tim.blog/2020/09/14/how-to-heal-trauma/',
+                 youtube='https://www.youtube.com/watch?v=w9rvOfdk10c'),
+
     ])
     _save_all_notes(all_notes)
 
