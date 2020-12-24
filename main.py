@@ -75,6 +75,9 @@ def main():
         InputUrl(blog='https://tim.blog/2020/09/14/how-to-heal-trauma/',
                  youtube='https://www.youtube.com/watch?v=w9rvOfdk10c'),
 
+        InputUrl(blog='https://tim.blog/2020/01/30/random-show-new-years-resolutions-2010-2019-lessons/',
+                 youtube='https://www.youtube.com/watch?v=BC5lBL3PsKw'),
+
     ])
     _save_all_notes(all_notes)
 
