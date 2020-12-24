@@ -81,6 +81,15 @@ def main():
         InputUrl(blog='https://tim.blog/2020/02/13/ryan-holiday-interviews-tim-ferriss/',
                  youtube='https://www.youtube.com/watch?v=p3Yjx4PKIkk'),
 
+        InputUrl(blog='https://tim.blog/2020/09/22/richard-koch/',
+                 youtube='https://www.youtube.com/watch?v=JznCRpl9wp4&t=2061s'),
+
+        InputUrl(blog='https://tim.blog/2020/03/05/tyler-cowen/',
+                 youtube='https://www.youtube.com/watch?v=v_orPt6YR8Y'),
+
+        InputUrl(blog='https://tim.blog/2020/10/14/naval/',
+                 youtube='https://www.youtube.com/watch?v=HiYo14wylQw&t=2204s'),
+
     ])
     _save_all_notes(all_notes)
 
