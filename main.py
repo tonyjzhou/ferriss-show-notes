@@ -69,6 +69,9 @@ def main():
         InputUrl(blog='https://tim.blog/2020/11/24/steven-rinella-wilderness-skills-and-survival/',
                  youtube='https://www.youtube.com/watch?v=MoD6E7rQbDs'),
 
+        InputUrl(blog='https://tim.blog/2020/06/26/hugh-jackman/',
+                 youtube='https://www.youtube.com/watch?v=kzF8StNS_aw'),
+
     ])
     _save_all_notes(all_notes)
 
