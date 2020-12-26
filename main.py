@@ -90,6 +90,9 @@ def main():
         InputUrl(blog='https://tim.blog/2020/10/14/naval/',
                  youtube='https://www.youtube.com/watch?v=HiYo14wylQw&t=2204s'),
 
+        InputUrl(blog='https://tim.blog/2018/06/10/how-to-succeed-in-high-stress-situations/',
+                 youtube='https://www.youtube.com/watch?v=jTbRx2B03WU'),
+
     ])
     _save_all_notes(all_notes)
 
