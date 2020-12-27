@@ -38,7 +38,7 @@ def _make_notes(blog_url: str, youtube_url: str) -> list:
 
 
 def _make_content(soup, youtube_url):
-    show_notes_tag = soup.find('h3', text=re.compile('SHOW NOTES'))
+    show_notes_tag = soup.find('h3', text=re.compile('SHOW NOTES', flags=re.IGNORECASE))
     notes_tag = show_notes_tag.fetchNextSiblings()[0]
     note_regexp = re.compile(r'(.+) \[(.+)\]')
     content = []
@@ -92,6 +92,12 @@ def main():
 
         InputUrl(blog='https://tim.blog/2018/06/10/how-to-succeed-in-high-stress-situations/',
                  youtube='https://www.youtube.com/watch?v=jTbRx2B03WU'),
+
+        InputUrl(blog='https://tim.blog/2015/08/18/the-evolutionary-angel-naval-ravikant/',
+                 youtube='https://www.youtube.com/watch?v=-7J-Gwc9pVg'),
+
+        InputUrl(blog='https://tim.blog/2016/01/30/naval-ravikant-on-happiness-hacks/',
+                 youtube='https://www.youtube.com/watch?v=I53WciFh6ik'),
 
     ])
     _save_all_notes(all_notes)
