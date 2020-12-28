@@ -66,14 +66,8 @@ def main():
         InputUrl(blog='https://tim.blog/2020/12/08/jerry-seinfeld/',
                  youtube='https://www.youtube.com/watch?v=yNTmFORn3xQ'),
 
-        InputUrl(blog='https://tim.blog/2020/11/24/steven-rinella-wilderness-skills-and-survival/',
-                 youtube='https://www.youtube.com/watch?v=MoD6E7rQbDs'),
-
         InputUrl(blog='https://tim.blog/2020/06/26/hugh-jackman/',
                  youtube='https://www.youtube.com/watch?v=kzF8StNS_aw'),
-
-        InputUrl(blog='https://tim.blog/2020/09/14/how-to-heal-trauma/',
-                 youtube='https://www.youtube.com/watch?v=w9rvOfdk10c'),
 
         InputUrl(blog='https://tim.blog/2020/01/30/random-show-new-years-resolutions-2010-2019-lessons/',
                  youtube='https://www.youtube.com/watch?v=BC5lBL3PsKw'),
@@ -92,6 +86,51 @@ def main():
 
         InputUrl(blog='https://tim.blog/2016/01/30/naval-ravikant-on-happiness-hacks/',
                  youtube='https://www.youtube.com/watch?v=I53WciFh6ik'),
+
+        InputUrl(blog='https://tim.blog/2020/01/23/sam-zell/',
+                 youtube='https://www.youtube.com/watch?v=IdCuERZJF0I'),
+
+        InputUrl(blog='https://tim.blog/2020/05/15/sam-harris-2/',
+                 youtube='https://www.youtube.com/watch?v=BjMhLhXCirc'),
+
+        InputUrl(blog='https://tim.blog/2020/02/27/josh-waitzkin-beginners-mind-self-actualization-advice-from-your-future-self/',
+                 youtube='https://www.youtube.com/watch?v=ZXjKNFD9cvo'),
+
+        InputUrl(blog='https://tim.blog/2020/05/01/michael-lewis/',
+                 youtube='https://www.youtube.com/watch?v=L5qWV1EG0Rc'),
+
+        InputUrl(blog='https://tim.blog/2020/08/05/mike-novogratz/',
+                 youtube='https://www.youtube.com/watch?v=Xx4DQgNHKpY'),
+
+        InputUrl(blog='https://tim.blog/2019/12/05/adam-grant/',
+                 youtube='https://www.youtube.com/watch?v=fbdfMn6phDw'),
+
+        InputUrl(blog='https://tim.blog/2018/09/25/howard-marks/',
+                 youtube='https://www.youtube.com/watch?v=9qeWQz7qCW4'),
+
+        InputUrl(blog='https://tim.blog/2020/05/11/howard-marks-2/',
+                 youtube='https://www.youtube.com/watch?v=H0_ZscgTGXE'),
+
+        InputUrl(blog='https://tim.blog/2018/12/20/patrick-collison/',
+                 youtube='https://www.youtube.com/watch?v=l73FKkh29yE'),
+
+        InputUrl(blog='https://tim.blog/2018/08/27/drew-houston/',
+                 youtube='https://www.youtube.com/watch?v=A_E1t7FgAcU'),
+
+        InputUrl(blog='https://tim.blog/2019/04/09/eric-schmidt/',
+                 youtube='https://www.youtube.com/watch?v=O1IgduDUzIY'),
+
+        InputUrl(blog='https://tim.blog/2018/02/28/how-to-secure-financial-freedom-maximize-productivity-and-protect-your-health/',
+                 youtube='https://www.youtube.com/watch?v=QBjM-G_d2RY'),
+
+        InputUrl(blog='https://tim.blog/2017/10/09/richard-branson/',
+                 youtube='https://www.youtube.com/watch?v=KxL1B_3_KHk'),
+
+        InputUrl(blog='https://tim.blog/2017/02/13/mr-money-mustache/',
+                 youtube='https://www.youtube.com/watch?v=-FlLj64dI1Q'),
+
+        InputUrl(blog='https://tim.blog/2017/09/13/ray-dalio/',
+                 youtube='https://www.youtube.com/watch?v=hRM7Gsyn4H4'),
 
     ])
     _save_all_notes(all_notes)
