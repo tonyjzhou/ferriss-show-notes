@@ -84,14 +84,8 @@ def main():
         InputUrl(blog='https://tim.blog/2020/09/22/richard-koch/',
                  youtube='https://www.youtube.com/watch?v=JznCRpl9wp4'),
 
-        InputUrl(blog='https://tim.blog/2020/03/05/tyler-cowen/',
-                 youtube='https://www.youtube.com/watch?v=v_orPt6YR8Y'),
-
         InputUrl(blog='https://tim.blog/2020/10/14/naval/',
                  youtube='https://www.youtube.com/watch?v=HiYo14wylQw'),
-
-        InputUrl(blog='https://tim.blog/2018/06/10/how-to-succeed-in-high-stress-situations/',
-                 youtube='https://www.youtube.com/watch?v=jTbRx2B03WU'),
 
         InputUrl(blog='https://tim.blog/2015/08/18/the-evolutionary-angel-naval-ravikant/',
                  youtube='https://www.youtube.com/watch?v=-7J-Gwc9pVg'),
