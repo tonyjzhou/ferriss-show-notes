@@ -18,37 +18,38 @@ def _make_all_notes(urls: list) -> list:
     all_notes = []
 
     for u in urls:
-        all_notes.extend(_make_notes(blog_url=u.blog, youtube_url=u.youtube))
+        all_notes.extend(_make_notes(blog_url=u.blog, youtube_url=u.youtube, time_prefix=u.time_prefix))
 
     return all_notes
 
 
-def _make_notes(blog_url: str, youtube_url: str) -> list:
+def _make_notes(blog_url: str, youtube_url: str, time_prefix) -> list:
     resp = requests.get(blog_url)
 
     if resp.status_code == 200:
         soup = BeautifulSoup(resp.text, 'html.parser')
 
-        content = _make_content(soup, youtube_url)
-        title = _extract_title(soup)
+        content = _make_content(soup, youtube_url, time_prefix=time_prefix)
+        title = time_prefix + _extract_title(soup)
 
         return [Notes(title=title, content=content)]
     else:
         return None
 
 
-def _make_content(soup, youtube_url):
+def _make_content(soup, youtube_url, time_prefix):
     show_notes_tag = soup.find('h3', text=re.compile('SHOW NOTES', flags=re.IGNORECASE))
-    notes_tag = show_notes_tag.fetchNextSiblings()[0]
-    note_regexp = re.compile(r'(.+) \[(.+)\]')
+    notes_tag = next(nt for nt in (show_notes_tag.fetchNextSiblings()) if len(nt.findAll('li')) > 0)
+
+    note_regexp = re.compile(rf'(.+) \[{time_prefix}(.+)\]')
     content = []
     for note_tag in notes_tag.findAll('li'):
         note_match = note_regexp.match(note_tag.text)
+        if note_match is not None:
+            description, time = note_match.group(1), note_match.group(2)
+            full_url = convert_to_full_url(base_url=youtube_url, time=time)
 
-        description, time = note_match.group(1), note_match.group(2)
-        full_url = convert_to_full_url(base_url=youtube_url, time=time)
-
-        content.append(Note(description=description, time=time, url=full_url))
+            content.append(Note(description=description, time=time, url=full_url))
     return content
 
 
@@ -138,6 +139,15 @@ def main():
             blog='https://tim.blog/2020/12/16/martine-rothblatt/#more-54007',
             youtube='https://www.youtube.com/watch?v=S1rExMw-13A'),
 
+        InputUrl(
+            blog='https://tim.blog/2014/10/15/money-master-the-game/',
+            youtube='https://www.youtube.com/watch?v=A7jOqYWJUKg',
+            time_prefix='Ep1-'),
+
+        InputUrl(
+            blog='https://tim.blog/2014/10/15/money-master-the-game/',
+            youtube='https://www.youtube.com/watch?v=-21OntkYTcM',
+            time_prefix='Ep2-'),
     ])
     _save_all_notes(all_notes)
 

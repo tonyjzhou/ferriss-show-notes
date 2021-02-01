@@ -19,9 +19,9 @@ class Notes:
         if title_match:
             simplified, number = title_match.group(1), title_match.group(2)
             simplified = re.sub(r'\W+', ' ', simplified)
-            return f"{simplified.replace(' ', '_')}_{number}.html"
+            return f"{simplified.replace(' ', '_')}_{number.replace(' ', '_').replace('&', '').replace('#', '')}.html"
 
-        return f"{self.title}.html"
+        return f"{self.title.replace('&', '').replace('#', '')}.html"
 
 
 @dataclass
@@ -35,3 +35,4 @@ class Note:
 class InputUrl:
     blog: str
     youtube: str
+    time_prefix: str = ''
