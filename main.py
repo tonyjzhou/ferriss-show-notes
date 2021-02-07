@@ -109,7 +109,13 @@ def main():
         InputUrl(blog='https://tim.blog/2017/09/13/ray-dalio/',
                  youtube='https://www.youtube.com/watch?v=hRM7Gsyn4H4'),
 
+        InputUrl(blog='https://tim.blog/2018/01/18/lessons-and-warnings-from-successful-risk-takers/',
+                 youtube='https://www.youtube.com/watch?v=VebV1tctnEk'),
+
         # Ferris
+        InputUrl(blog='https://tim.blog/2017/07/19/morning-routines-and-strategies/',
+                 youtube='https://www.youtube.com/watch?v=-2PQ4eQ6EKc'),
+
         InputUrl(blog='https://tim.blog/2020/01/30/random-show-new-years-resolutions-2010-2019-lessons/',
                  youtube='https://www.youtube.com/watch?v=BC5lBL3PsKw'),
 
@@ -138,6 +144,18 @@ def main():
         InputUrl(
             blog='https://tim.blog/2020/12/16/martine-rothblatt/#more-54007',
             youtube='https://www.youtube.com/watch?v=S1rExMw-13A'),
+
+        InputUrl(
+            blog='https://tim.blog/2015/09/07/the-iceman-wim-hof/',
+            youtube='https://www.youtube.com/watch?v=XiQ7ka11QnQ'),
+
+        InputUrl(
+            blog='https://tim.blog/2015/09/22/scott-adams-the-man-behind-dilbert/',
+            youtube='https://www.youtube.com/watch?v=3KFgzvC-ao8'),
+
+        InputUrl(
+            blog='https://tim.blog/2020/12/21/leo-babauta/#more-54052',
+            youtube='https://www.youtube.com/watch?v=rjtg9KDpQD8'),
 
         InputUrl(
             blog='https://tim.blog/2014/10/15/money-master-the-game/',
