@@ -196,6 +196,10 @@ def main():
             blog='https://tim.blog/2021/01/21/michael-phelps-grant-hackett/#more-54432',
             youtube='https://www.youtube.com/watch?v=aG5pLBH4-9s'),
 
+        InputUrl(
+            blog='https://tim.blog/2021/03/08/vitalik-buterin-naval-ravikant/#more-55095',
+            youtube='https://www.youtube.com/watch?v=42uhsP4vvCE'),
+
     ])
     _save_all_notes(all_notes)
 
