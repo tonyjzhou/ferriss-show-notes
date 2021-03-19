@@ -206,7 +206,7 @@ def main():
 
         InputUrl(
             blog='https://tim.blog/2021/03/01/jordan-peterson/',
-            youtube='https://www.youtube.com/watch?v=C1sEHNw4UIg&t=2s'),
+            youtube='https://www.youtube.com/watch?v=C1sEHNw4UIg'),
 
     ])
     _save_all_notes(all_notes)
