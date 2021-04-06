@@ -204,6 +204,18 @@ def main():
             blog='https://tim.blog/2017/06/04/nick-szabo/',
             youtube='https://www.youtube.com/watch?v=3FA3UjA0igY'),
 
+        InputUrl(
+            blog='https://tim.blog/2021/03/24/balaji-srinivasan/',
+            youtube='https://www.youtube.com/watch?v=eim8REOYLzA'),
+
+        InputUrl(
+            blog='https://tim.blog/2015/05/30/chris-sacca/',
+            youtube='https://www.youtube.com/watch?v=iqaXz2BPsfY'),
+
+        InputUrl(
+            blog='https://tim.blog/2016/01/15/chris-sacca-on-shark-tank-building-your-business-and-startup-mistakes/',
+            youtube='https://www.youtube.com/watch?v=cqCEJX7hMls'),
+
     ])
     _save_all_notes(all_notes)
 
