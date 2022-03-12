@@ -117,6 +117,9 @@ def main():
         InputUrl(blog='https://tim.blog/2020/10/14/naval/',
                  youtube='https://www.youtube.com/watch?v=HiYo14wylQw'),
 
+        InputUrl(blog='https://tim.blog/2022/03/01/morgan-housel-the-psychology-of-money/',
+                 youtube='https://www.youtube.com/watch?v=szQwdZDiVh4'),
+
         # Ferris
 
         InputUrl(blog='https://tim.blog/2016/01/22/the-tao-of-seneca/',
@@ -215,6 +218,14 @@ def main():
         InputUrl(
             blog='https://tim.blog/2016/01/15/chris-sacca-on-shark-tank-building-your-business-and-startup-mistakes/',
             youtube='https://www.youtube.com/watch?v=cqCEJX7hMls'),
+
+        InputUrl(
+            blog='https://tim.blog/2021/10/25/eric-schmidt-ai/',
+            youtube='https://www.youtube.com/watch?v=AGNImy8E02w'),
+
+        InputUrl(
+            blog='https://tim.blog/2021/02/26/steven-pressfield/',
+            youtube='https://www.youtube.com/watch?v=tC44dTV0kKo'),
 
     ])
     _save_all_notes(all_notes)
