@@ -231,6 +231,10 @@ def main():
             blog='https://tim.blog/2022/03/24/mark-zuckerberg/',
             youtube='https://www.youtube.com/watch?v=x-kALfaofek'),
 
+        InputUrl(
+            blog='https://tim.blog/2016/01/26/luis-von-ahn-duolingo/',
+            youtube='https://www.youtube.com/watch?v=vafLtAoIYoE'),
+
     ])
     _save_all_notes(all_notes)
 
